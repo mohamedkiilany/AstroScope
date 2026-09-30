@@ -1,15 +1,21 @@
+import 'package:astroscope/database/db.dart';
+import 'package:astroscope/models/planets.dart';
 import 'package:astroscope/screens/home_screen.dart';
 import 'package:astroscope/screens/splash_screen.dart';
 import 'package:astroscope/state/favorites_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Db.init();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final List<Planet> initialFavorites;
+
+  const MyApp({super.key, this.initialFavorites = const []});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +29,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
       ),
     );
-    // return MaterialApp(home: const SplashScreen());
   }
+  //   return MaterialApp(
+  //     debugShowCheckedModeBanner: false,
+  //     home: const SplashScreen());
+  // }
 }

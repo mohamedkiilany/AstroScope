@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2500),
+      duration: const Duration(milliseconds: 2200),
     );
 
     _fadeAnimation = CurvedAnimation(
@@ -32,10 +32,11 @@ class _SplashScreenState extends State<SplashScreen>
     _scaleAnimation = Tween<double>(
       begin: 0.75,
       end: 1.0,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.elasticOut));
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
 
     _controller.forward();
-    Timer(const Duration(seconds: 3), () {
+
+    Timer(const Duration(seconds: 4), () {
       if (mounted) {
         Navigator.of(context).pushReplacementNamed('/home');
       }
@@ -51,91 +52,110 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(color: Color(0xff091522)),
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset("assets/images/splash.png", fit: BoxFit.cover),
+          ),
 
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: Image.asset(
-                "assets/images/finall.jpg",
-                fit: BoxFit.cover,
-              ),
-            ),
-            SafeArea(
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Center(
-                      child: FadeTransition(
-                        opacity: _fadeAnimation,
-                        child: ScaleTransition(
-                          scale: _scaleAnimation,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Column(
-                                children: [
-                                  Container(
-                                    width: 300,
-                                    height: 300,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                        color: Colors.white,
-                                        width: 2,
-                                      ),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color:Color(0xff091522).withOpacity(0.80),
-                                          blurRadius: 25,
-                                          spreadRadius: 15,
-                                        ),
-                                      ],
-                                    ),
-                                    child: Center(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: const [
-                                          Text(
-                                            'AstroScope',
-                                            style: TextStyle(
-                                              fontSize: 40,
-                                              fontWeight: FontWeight.w700,
-                                              color: Colors.white,
-                                              letterSpacing: 0.5,
-                                            ),
-                                          ),
-                                          SizedBox(height: 3),
-                                          Text(
-                                            "Planet Explorer",
-                                            style: TextStyle(
-                                              fontSize: 22,
-                                              color: Color.fromARGB(
-                                                137,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+          // Dark overlay
+          Positioned.fill(
+            child: Container(color: const Color(0xff091522).withOpacity(0.25)),
+          ),
+
+          // Content
+          SafeArea(
+            child: Center(
+              child: FadeTransition(
+                opacity: _fadeAnimation,
+                child: ScaleTransition(
+                  scale: _scaleAnimation,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        width: 150,
+                        height: 150,
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: const Color(0xff091522).withOpacity(0.25),
+                          borderRadius: BorderRadius.circular(35),
+                          border: Border.all(
+                            color: Colors.white.withOpacity(0.45),
+                            width: 1.5,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.cyanAccent.withOpacity(0.15),
+                              blurRadius: 35,
+                              spreadRadius: 5,
+                            ),
+                          ],
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(35),
+                          child: Image.asset(
+                            "assets/images/icon.png",
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                    ),
+
+                      const Text(
+                        "AstroScope",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+
+                      const Text(
+                        "PLANET EXPLORER",
+                        style: TextStyle(
+                          color: Color(0xffB7D9E8),
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: 4,
+                        ),
+                      ),
+
+                      const SizedBox(height: 45),
+
+                      // Loading bar
+                      SizedBox(
+                        width: 250,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: LinearProgressIndicator(
+                            minHeight: 3,
+                            backgroundColor: Colors.white.withOpacity(0.15),
+                            valueColor: const AlwaysStoppedAnimation<Color>(
+                              Color(0xff32C5D2),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 16),
+
+                      // Bottom text
+                      Text(
+                        "Explore the universe",
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.75),
+                          fontSize: 13,
+                          letterSpacing: 1,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
