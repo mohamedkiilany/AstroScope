@@ -297,7 +297,7 @@ class _MercuryHighlight extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xff1d2528).withOpacity(0.96),
+        color: const Color(0xff1d2528).withValues(alpha:0.96),
         border: Border(left: BorderSide(color: color, width: 3)),
       ),
       child: Row(

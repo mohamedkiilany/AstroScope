@@ -292,7 +292,7 @@ class _VenusHighlight extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xff261b13).withOpacity(0.95),
+        color: const Color(0xff261b13).withValues(alpha:0.95),
         border: Border(left: BorderSide(color: color, width: 3)),
       ),
       child: Row(

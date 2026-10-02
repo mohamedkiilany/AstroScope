@@ -15,7 +15,7 @@ class IconButtom extends StatelessWidget {
         width: 40,
         height: 40,
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.08),
+          color: Colors.white.withValues(alpha:0.08),
           shape: BoxShape.circle,
         ),
         child: Icon(icon, color: Colors.white, size: 20),

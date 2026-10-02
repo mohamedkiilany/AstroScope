@@ -51,30 +51,30 @@ class EarthScreen extends StatelessWidget {
     ),
   ];
 
-  static const _facts = [
-    'Measuring Up',
-    'If the Sun were as tall as a typical front door, Earth would be the size of a nickel.',
+  // static const _facts = [
+  //   'Measuring Up',
+  //   'If the Sun were as tall as a typical front door, Earth would be the size of a nickel.',
 
-    'We\'re On It',
-    'Earth is a rocky planet with mountains, canyons, plains, and a surface mostly covered in water.',
+  //   'We\'re On It',
+  //   'Earth is a rocky planet with mountains, canyons, plains, and a surface mostly covered in water.',
 
-    'Breathe Easy',
-    'Earth\'s atmosphere is 78% nitrogen, 21% oxygen, and 1% other ingredients.',
+  //   'Breathe Easy',
+  //   'Earth\'s atmosphere is 78% nitrogen, 21% oxygen, and 1% other ingredients.',
 
-    'Our Cosmic Companion',
-    'Earth has one moon.',
-    'Ringless',
-    'Earth has no rings.',
+  //   'Our Cosmic Companion',
+  //   'Earth has one moon.',
+  //   'Ringless',
+  //   'Earth has no rings.',
 
-    'Orbital Science',
-    'Spacecraft study Earth as a whole system, observing its atmosphere, ocean, glaciers, and solid ground.',
+  //   'Orbital Science',
+  //   'Spacecraft study Earth as a whole system, observing its atmosphere, ocean, glaciers, and solid ground.',
 
-    'Home, Sweet Home',
-    'Earth is the perfect place for life as we know it.',
+  //   'Home, Sweet Home',
+  //   'Earth is the perfect place for life as we know it.',
 
-    'Protective Shield',
-    'Our atmosphere protects us from incoming meteoroids, most of which burn up before reaching the surface.',
-  ];
+  //   'Protective Shield',
+  //   'Our atmosphere protects us from incoming meteoroids, most of which burn up before reaching the surface.',
+  // ];
 
   @override
   Widget build(BuildContext context) {

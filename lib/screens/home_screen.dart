@@ -36,9 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    const Color(0xff05070d).withOpacity(0.82),
-                    const Color(0xff07111f).withOpacity(0.48),
-                    const Color(0xff05070d).withOpacity(0.94),
+                    const Color(0xff05070d).withValues(alpha:0.82),
+                    const Color(0xff07111f).withValues(alpha:0.48),
+                    const Color(0xff05070d).withValues(alpha:0.94),
                   ],
                   stops: const [0, 0.48, 1],
                 ),

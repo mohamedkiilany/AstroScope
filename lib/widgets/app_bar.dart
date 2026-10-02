@@ -13,7 +13,7 @@ class AppBarWidget extends StatelessWidget {
       height: 85,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: const Color(0xff07111f).withOpacity(0.38),
+        color: const Color(0xff07111f).withValues(alpha:0.38),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),

@@ -255,7 +255,7 @@ class _JupiterStat extends StatelessWidget {
       constraints: const BoxConstraints(minHeight: 76),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       decoration: BoxDecoration(
-        color: const Color(0xff241b15).withOpacity(0.9),
+        color: const Color(0xff241b15).withValues(alpha:0.9),
         border: const Border(
           top: BorderSide(color: Color(0xffd59658), width: 2),
         ),
@@ -316,7 +316,7 @@ class _JupiterHighlight extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xff211a15).withOpacity(0.94),
+        color: const Color(0xff211a15).withValues(alpha:0.94),
         border: Border(left: BorderSide(color: color, width: 3)),
       ),
       child: Row(

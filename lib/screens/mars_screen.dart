@@ -239,7 +239,7 @@ class _MarsStat extends StatelessWidget {
       constraints: const BoxConstraints(minHeight: 76),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       decoration: BoxDecoration(
-        color: const Color(0xff291412).withOpacity(0.94),
+        color: const Color(0xff291412).withValues(alpha:0.94),
         border: const Border(
           top: BorderSide(color: Color(0xffe35a45), width: 2),
         ),

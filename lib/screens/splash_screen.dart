@@ -60,7 +60,9 @@ class _SplashScreenState extends State<SplashScreen>
 
           // Dark overlay
           Positioned.fill(
-            child: Container(color: const Color(0xff091522).withOpacity(0.25)),
+            child: Container(
+              color: const Color(0xff091522).withValues(alpha: 0.25),
+            ),
           ),
 
           // Content
@@ -78,15 +80,16 @@ class _SplashScreenState extends State<SplashScreen>
                         height: 150,
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: const Color(0xff091522).withOpacity(0.25),
+                          color: const Color(0xff091522)
+                              .withValues(alpha: 0.25),
                           borderRadius: BorderRadius.circular(35),
                           border: Border.all(
-                            color: Colors.white.withOpacity(0.45),
+                            color: Colors.white.withValues(alpha: 0.45),
                             width: 1.5,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.cyanAccent.withOpacity(0.15),
+                              color: Colors.cyanAccent.withValues(alpha: 0.15),
                               blurRadius: 35,
                               spreadRadius: 5,
                             ),
@@ -130,7 +133,9 @@ class _SplashScreenState extends State<SplashScreen>
                           borderRadius: BorderRadius.circular(10),
                           child: LinearProgressIndicator(
                             minHeight: 3,
-                            backgroundColor: Colors.white.withOpacity(0.15),
+                            backgroundColor: Colors.white.withValues(
+                              alpha: 0.15,
+                            ),
                             valueColor: const AlwaysStoppedAnimation<Color>(
                               Color(0xff32C5D2),
                             ),
@@ -144,7 +149,7 @@ class _SplashScreenState extends State<SplashScreen>
                       Text(
                         "Explore the universe",
                         style: TextStyle(
-                          color: Colors.white.withOpacity(0.75),
+                          color: Colors.white.withValues(alpha: 0.75),
                           fontSize: 13,
                           letterSpacing: 1,
                         ),

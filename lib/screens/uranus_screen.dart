@@ -246,7 +246,7 @@ class _UranusStat extends StatelessWidget {
       constraints: const BoxConstraints(minHeight: 76),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       decoration: BoxDecoration(
-        color: const Color(0xff172526).withOpacity(0.92),
+        color: const Color(0xff172526).withValues(alpha:0.92),
         border: const Border(
           top: BorderSide(color: Color(0xff71c8c9), width: 2),
         ),
@@ -307,7 +307,7 @@ class _UranusHighlight extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xff152122).withOpacity(0.95),
+        color: const Color(0xff152122).withValues(alpha:0.95),
         border: Border(left: BorderSide(color: color, width: 3)),
       ),
       child: Row(

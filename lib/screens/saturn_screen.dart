@@ -1,85 +1,82 @@
 import 'package:flutter/material.dart';
 
-class NeptuneScreen extends StatelessWidget {
-  const NeptuneScreen({super.key});
+class SaturnScreen extends StatelessWidget {
+  const SaturnScreen({super.key});
 
   static const _sections = [
     (
-      eyebrow: 'DISCOVERY & NAMESAKE',
-      title: 'Found with mathematics',
-      body: 'Galileo recorded Neptune as a fixed star in 1612 and 1613. In 1846, astronomers used mathematical predictions to locate the planet: Urbain Le Verrier calculated where an unknown world could explain irregularities in Uranus’s orbit, and Johann Gottfried Galle found Neptune at the Berlin Observatory. Triton was discovered just 17 days later. Neptune is named for the Roman god of the sea.',
+      eyebrow: 'NAMESAKE',
+      title: 'Known since ancient times',
+      body: 'Saturn is the farthest planet from Earth visible to the unaided eye. It was named for the Roman god of agriculture and wealth, father of Jupiter.',
     ),
     (
       eyebrow: 'POTENTIAL FOR LIFE',
-      title: 'An unforgiving world',
-      body: 'Neptune’s temperatures, pressures, and materials are too extreme and volatile for life as we know it. It is not considered a likely place for organisms to adapt and thrive.',
+      title: 'Worlds worth looking closer at',
+      body: 'Saturn itself is too extreme and volatile to be conducive to life as we know it. Some of its moons may be more promising: Enceladus and Titan both have evidence of internal oceans and remain compelling places to investigate.',
     ),
     (
       eyebrow: 'SIZE & DISTANCE',
-      title: 'Thirty times farther from the Sun',
-      body: 'Neptune has an equatorial diameter of 30,775 miles (49,528 kilometers), about four times Earth’s. If Earth were a nickel, Neptune would be about the size of a baseball. It averages 2.8 billion miles (4.5 billion kilometers) from the Sun, or 30 AU. Sunlight takes about four hours to reach it, and noon would look like dim twilight.',
+      title: 'Nine Earths across',
+      body: 'Saturn’s equatorial diameter is about 74,897 miles (120,500 kilometers), around nine times Earth’s. If Earth were a nickel, Saturn would be about the size of a volleyball. It averages 886 million miles (1.4 billion kilometers) from the Sun, or 9.5 AU; sunlight takes about 80 minutes to arrive.',
     ),
     (
       eyebrow: 'ORBIT & ROTATION',
-      title: 'One year lasts 165 Earth years',
-      body: 'A day on Neptune lasts about 16 hours. One orbit takes 165 Earth years, or about 60,190 days; Neptune completed its first full orbit since discovery in 2011. Its axis tilts 28 degrees, giving it seasons that last more than 40 years each. Pluto’s orbit can bring it closer to the Sun than Neptune for 20 years at a time, most recently from 1979 to 1999. Their repeating orbital pattern prevents close approaches.',
+      title: 'A quick spin, a long year',
+      body: 'A day on Saturn lasts about 10.7 hours, the second-shortest day of any planet. One orbit around the Sun takes about 29.4 Earth years, or 10,756 Earth days. Saturn’s axis tilts 26.73 degrees, similar to Earth’s, so it experiences seasons.',
     ),
     (
       eyebrow: 'MOONS',
-      title: 'Triton, a captured world',
-      body: 'Neptune has 16 known moons, named for Greek sea gods and nymphs. Triton, discovered by William Lassell 17 days after Neptune, is the largest. It orbits backward compared with Neptune’s rotation, suggesting it may have been captured. Despite a surface temperature near -391 F (-235 C), Voyager 2 saw icy geysers erupting more than 5 miles (8 kilometers) high. Triton has a thin atmosphere that has been observed warming, though scientists do not yet know why.',
+      title: 'A system of remarkable worlds',
+      body: 'As of March 2025, Saturn has 274 confirmed moons, more than any other planet, with additional discoveries still awaiting confirmation and official names. The moons range from haze-shrouded Titan to cratered Phoebe. Enceladus sprays jets of water into space, while Titan has lakes of liquid methane and evidence of an internal ocean.',
     ),
     (
       eyebrow: 'RINGS',
-      title: 'Five rings and four mysterious arcs',
-      body: 'Neptune has at least five main rings: Galle, Leverrier, Lassell, Arago, and Adams. They are thought to be relatively young and short-lived. The outermost Adams ring contains four prominent clumps of material called Liberté, Egalité, Fraternité, and Courage. The nearby moon Galatea may help keep these arcs from spreading evenly around the ring.',
+      title: 'Ice, rock, and the Cassini Division',
+      body: 'Saturn’s rings may be fragments of comets, asteroids, or moons torn apart by gravity before reaching the planet. Billions of icy and dusty pieces range from tiny grains to house-sized chunks, with a few as large as mountains. The system reaches about 175,000 miles (282,000 kilometers) from Saturn, yet the main rings are typically only about 30 feet (10 meters) tall. The main rings are A, B, and C; the 2,920-mile (4,700-kilometer) Cassini Division separates A and B. Fainter rings D, E, F, and G extend farther out, with a distant Phoebe ring as well. From Saturn’s cloud tops, the rings would look mostly white, and each ring orbits at its own speed.',
     ),
     (
       eyebrow: 'FORMATION',
-      title: 'An ice giant from the outer solar system',
-      body: 'Neptune formed about 4.5 billion years ago as gravity pulled gas and dust together. Like Uranus, it may have formed closer to the Sun and migrated outward about four billion years ago.',
+      title: 'A giant from the early solar system',
+      body: 'Saturn formed about 4.5 billion years ago as gravity pulled swirling gas and dust together. Like Jupiter, it is made mostly of hydrogen and helium, the same two main ingredients as the Sun. It settled into its current position about four billion years ago as the sixth planet from the Sun.',
     ),
     (
       eyebrow: 'STRUCTURE',
-      title: 'A dense world of hot, icy fluids',
-      body: 'Neptune is one of two ice giants. At least 80 percent of its mass is thought to be a hot, dense fluid of water, methane, and ammonia above a small rocky core. It is the densest of the giant planets. Deep beneath its cold clouds, intense pressure may keep an ocean of superhot water from boiling away.',
+      title: 'A planet lighter than water',
+      body: 'Saturn’s dense center contains metals such as iron and nickel, surrounded by rocky material and compounds solidified under intense heat and pressure. A layer of liquid metallic hydrogen sits inside liquid hydrogen. Saturn is the only planet with an average density lower than water; in an impossibly large bathtub, it could float.',
     ),
     (
       eyebrow: 'SURFACE',
-      title: 'Clouds that deepen into a fluid mantle',
-      body: 'Neptune has no solid surface. Its atmosphere, mostly hydrogen, helium, and methane, extends to great depths and gradually merges into water and other melted ices around a heavier core with roughly Earth’s mass.',
+      title: 'No place to land',
+      body: 'As a gas giant, Saturn has no true surface. It is made mostly of swirling gases and liquids. A spacecraft descending deeper into the planet would encounter pressures and temperatures powerful enough to crush, melt, and vaporize it.',
     ),
     (
       eyebrow: 'ATMOSPHERE',
-      title: 'The windiest world in the solar system',
-      body: 'Neptune’s atmosphere is mostly hydrogen and helium with a little methane, which reflects blue light. Images processed in 2024 showed that Uranus and Neptune look more alike in color than the deep-blue Voyager images suggested. Winds can exceed 1,200 miles per hour (2,000 kilometers per hour), faster than on any other planet. The Great Dark Spot observed by Voyager 2 in 1989 has disappeared, but other storms have since appeared.',
+      title: 'Cloud bands and a polar hexagon',
+      body: 'Saturn’s clouds form faint stripes, jet streams, and storms in shades of yellow, brown, and gray. Equatorial winds reach about 1,600 feet per second (500 meters per second), and pressure deep in the atmosphere squeezes gas into liquid. At the north pole, a six-sided jet stream spans about 20,000 miles (30,000 kilometers), with winds near 200 miles per hour (322 kilometers per hour) around a rotating central storm. Hubble observations dating back to 2023 revealed an evolving, 10-sided atmospheric wave around the south pole, reported in September 2026.',
     ),
     (
       eyebrow: 'MAGNETOSPHERE',
-      title: 'A magnetic field that wobbles',
-      body: 'Neptune’s magnetic axis is tilted about 47 degrees from its rotation axis. Like Uranus, this misalignment makes the magnetosphere vary dramatically as the planet rotates. Neptune’s magnetic field is about 27 times more powerful than Earth’s.',
+      title: 'Auroras inside a vast magnetic realm',
+      body: 'Saturn’s magnetic field is about 578 times as powerful as Earth’s. The planet, its rings, and many of its moons lie within its magnetosphere, where charged particles respond more strongly to Saturn’s field than to the solar wind. Cassini found that some auroras are driven by particles from Saturn’s moons and the planet’s rapid rotation, though these processes are not yet fully understood.',
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff080f1c),
+      backgroundColor: const Color(0xff100f0d),
       appBar: AppBar(
-        title: const Text('Neptune'),
+        title: const Text('Saturn'),
         centerTitle: true,
-        backgroundColor: const Color(0xff101a2b),
+        backgroundColor: const Color(0xff191712),
         foregroundColor: Colors.white,
       ),
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/neptunee.webp',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/sa.jpg', fit: BoxFit.cover),
           ),
-          const Positioned.fill(child: ColoredBox(color: Color(0xe6080f1c))),
+          const Positioned.fill(child: ColoredBox(color: Color(0xe6100f0d))),
           SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.fromLTRB(18, 12, 18, 40),
@@ -89,12 +86,12 @@ class NeptuneScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const _NeptuneHero(),
+                    const _SaturnHero(),
                     const SizedBox(height: 18),
                     const Text(
-                      'A remote blue world of dim twilight, ancient storms, and supersonic winds.',
+                      'A golden gas giant wrapped in a spectacular system of ice and rock.',
                       style: TextStyle(
-                        color: Color(0xffd8e3f1),
+                        color: Color(0xffe6dfd0),
                         fontSize: 17,
                         height: 1.4,
                       ),
@@ -103,49 +100,49 @@ class NeptuneScreen extends StatelessWidget {
                     const Row(
                       children: [
                         Expanded(
-                          child: _NeptuneStat(
-                            value: '16 hours',
-                            label: 'A NEPTUNIAN DAY',
+                          child: _SaturnStat(
+                            value: '10.7 hours',
+                            label: 'A SATURN DAY',
                           ),
                         ),
                         SizedBox(width: 10),
                         Expanded(
-                          child: _NeptuneStat(
-                            value: '16',
-                            label: 'KNOWN MOONS',
+                          child: _SaturnStat(
+                            value: '274',
+                            label: 'CONFIRMED MOONS',
                           ),
                         ),
                         SizedBox(width: 10),
                         Expanded(
-                          child: _NeptuneStat(
-                            value: '30 AU',
+                          child: _SaturnStat(
+                            value: '9.5 AU',
                             label: 'FROM THE SUN',
                           ),
                         ),
                       ],
                     ),
                     const SizedBox(height: 22),
-                    const _NeptuneHighlight(
-                      icon: Icons.air,
-                      label: 'EXTREME WINDS',
-                      title: 'More than 2,000 km/h',
-                      detail: 'Neptune’s methane clouds race through the atmosphere at speeds unmatched anywhere else in the solar system.',
-                      color: Color(0xff63c8ef),
+                    const _SaturnHighlight(
+                      icon: Icons.blur_circular,
+                      label: 'THE SIGNATURE FEATURE',
+                      title: 'Rings made of countless worlds',
+                      detail: 'Billions of icy and rocky fragments form a vast, thin ring system with gaps, bands, and intricate structure.',
+                      color: Color(0xffdfbf83),
                     ),
                     const SizedBox(height: 10),
-                    const _NeptuneHighlight(
+                    const _SaturnHighlight(
                       icon: Icons.water,
-                      label: 'THE LARGEST MOON',
-                      title: 'Triton erupts in the deep freeze',
-                      detail: 'This captured, backward-orbiting moon is colder than -235 C, yet icy geysers shoot material miles above its surface.',
-                      color: Color(0xffb2a8f3),
+                      label: 'MOONS WITH OCEANS',
+                      title: 'Enceladus and Titan',
+                      detail: 'Water jets burst from Enceladus, while hazy Titan has methane lakes. Both moons may also conceal internal oceans.',
+                      color: Color(0xff86b9c3),
                     ),
                     const SizedBox(height: 30),
                     const Row(
                       children: [
                         Expanded(
                           child: Text(
-                            'Explore Neptune',
+                            'Explore Saturn',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 23,
@@ -154,9 +151,9 @@ class NeptuneScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'THE EIGHTH PLANET',
+                          'THE SIXTH PLANET',
                           style: TextStyle(
-                            color: Color(0xff63c8ef),
+                            color: Color(0xffdfbf83),
                             fontSize: 10,
                             fontWeight: FontWeight.w800,
                             letterSpacing: 1.3,
@@ -166,7 +163,7 @@ class NeptuneScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     ..._sections.map(
-                      (section) => _NeptuneSection(
+                      (section) => _SaturnSection(
                         eyebrow: section.eyebrow,
                         title: section.title,
                         body: section.body,
@@ -183,8 +180,8 @@ class NeptuneScreen extends StatelessWidget {
   }
 }
 
-class _NeptuneHero extends StatelessWidget {
-  const _NeptuneHero();
+class _SaturnHero extends StatelessWidget {
+  const _SaturnHero();
 
   @override
   Widget build(BuildContext context) {
@@ -196,13 +193,13 @@ class _NeptuneHero extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Image.asset('assets/images/neptunee.webp', fit: BoxFit.cover),
+            Image.asset('assets/images/sa.jpg', fit: BoxFit.cover),
             const DecoratedBox(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0x00000000), Color(0xe6080f1c)],
+                  colors: [Color(0x00000000), Color(0xe6100f0d)],
                   stops: [0.34, 1],
                 ),
               ),
@@ -215,9 +212,9 @@ class _NeptuneHero extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'THE ICE GIANT',
+                    'THE RINGED PLANET',
                     style: TextStyle(
-                      color: Color(0xff8edcff),
+                      color: Color(0xffffd995),
                       fontSize: 11,
                       fontWeight: FontWeight.w800,
                       letterSpacing: 2.2,
@@ -225,7 +222,7 @@ class _NeptuneHero extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    'NEPTUNE',
+                    'SATURN',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 42,
@@ -243,11 +240,11 @@ class _NeptuneHero extends StatelessWidget {
   }
 }
 
-class _NeptuneStat extends StatelessWidget {
+class _SaturnStat extends StatelessWidget {
   final String value;
   final String label;
 
-  const _NeptuneStat({required this.value, required this.label});
+  const _SaturnStat({required this.value, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -255,9 +252,9 @@ class _NeptuneStat extends StatelessWidget {
       constraints: const BoxConstraints(minHeight: 76),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       decoration: BoxDecoration(
-        color: const Color(0xff162137).withOpacity(0.93),
+        color: const Color(0xff252117).withValues(alpha:0.9),
         border: const Border(
-          top: BorderSide(color: Color(0xff63c8ef), width: 2),
+          top: BorderSide(color: Color(0xffd3b373), width: 2),
         ),
       ),
       child: Column(
@@ -283,10 +280,10 @@ class _NeptuneStat extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(
-              color: Color(0xffbdcadb),
+              color: Color(0xffc7beaa),
               fontSize: 8,
               fontWeight: FontWeight.w700,
-              letterSpacing: 0.5,
+              letterSpacing: 0.55,
             ),
           ),
         ],
@@ -295,14 +292,14 @@ class _NeptuneStat extends StatelessWidget {
   }
 }
 
-class _NeptuneHighlight extends StatelessWidget {
+class _SaturnHighlight extends StatelessWidget {
   final IconData icon;
   final String label;
   final String title;
   final String detail;
   final Color color;
 
-  const _NeptuneHighlight({
+  const _SaturnHighlight({
     required this.icon,
     required this.label,
     required this.title,
@@ -316,7 +313,7 @@ class _NeptuneHighlight extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xff151e31).withOpacity(0.95),
+        color: const Color(0xff211f18).withValues(alpha:0.94),
         border: Border(left: BorderSide(color: color, width: 3)),
       ),
       child: Row(
@@ -350,7 +347,7 @@ class _NeptuneHighlight extends StatelessWidget {
                 Text(
                   detail,
                   style: const TextStyle(
-                    color: Color(0xffd3dbea),
+                    color: Color(0xffd6d0cd),
                     fontSize: 13,
                     height: 1.45,
                   ),
@@ -364,12 +361,12 @@ class _NeptuneHighlight extends StatelessWidget {
   }
 }
 
-class _NeptuneSection extends StatelessWidget {
+class _SaturnSection extends StatelessWidget {
   final String eyebrow;
   final String title;
   final String body;
 
-  const _NeptuneSection({
+  const _SaturnSection({
     required this.eyebrow,
     required this.title,
     required this.body,
@@ -385,7 +382,7 @@ class _NeptuneSection extends StatelessWidget {
           Text(
             eyebrow,
             style: const TextStyle(
-              color: Color(0xff63c8ef),
+              color: Color(0xffdfbf83),
               fontSize: 10,
               fontWeight: FontWeight.w800,
               letterSpacing: 1.5,
@@ -404,7 +401,7 @@ class _NeptuneSection extends StatelessWidget {
           Text(
             body,
             style: const TextStyle(
-              color: Color(0xffd3dbea),
+              color: Color(0xffd6d0cd),
               fontSize: 14,
               height: 1.55,
             ),

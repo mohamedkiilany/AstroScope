@@ -33,7 +33,7 @@ class PlanetSelector extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isSelected
                     // ? Colors.white.withOpacity(0.2)
-                    ? Color(0xff091522).withOpacity(0.56)
+                    ? Color(0xff091522).withValues(alpha:0.56)
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(25),
                 border: Border.all(

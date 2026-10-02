@@ -4,8 +4,8 @@ import 'package:astroscope/screens/earth_screen.dart';
 import 'package:astroscope/screens/jupiter_screen.dart';
 import 'package:astroscope/screens/mars_screen.dart';
 import 'package:astroscope/screens/mercury_screen.dart';
-import 'package:astroscope/screens/neptune-screen.dart';
-import 'package:astroscope/screens/saturn-screen.dart';
+import 'package:astroscope/screens/neptune_screen.dart';
+import 'package:astroscope/screens/saturn_screen.dart';
 import 'package:astroscope/screens/uranus_screen.dart';
 import 'package:astroscope/screens/venus_screen.dart';
 import 'package:astroscope/state/favorites_cubit.dart';
@@ -21,7 +21,7 @@ class PlanetOfTheDay extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Color(0xff091522).withOpacity(0.56),
+        color: Color(0xff091522).withValues(alpha:0.56),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
